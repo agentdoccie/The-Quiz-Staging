@@ -1,0 +1,67 @@
+{
+  "level": 5,
+  "title": "Peace, Responsibility, and Restoration",
+  "summary": "This final level unites all principles — peace, self-governance, and lawful restoration of rights and responsibilities.",
+  "questions": [
+    {
+      "question": "What is the highest duty of lawful self-governance?",
+      "options": ["To keep the peace", "To gain political power", "To collect taxes", "To enforce control"],
+      "correctIndex": 0
+    },
+    {
+      "question": "True restoration of law begins with:",
+      "options": ["Individual responsibility and forgiveness", "Legislative reform", "Corporate reform", "Tax incentives"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lawful peace comes from:",
+      "options": ["Love and Gratitude", "Fear and Obedience", "Enforcement and Punishment", "Profit and Trade"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Each man or woman is responsible for:",
+      "options": ["Their own actions under Public Law", "Corporate compliance", "State enforcement", "Legal fiction maintenance"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What happens when people reclaim their lawful status?",
+      "options": [
+        "They restore lawful government by and for the people",
+        "They form a political faction",
+        "They join a trade union",
+        "They lose their rights"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The true foundation of law is based on:",
+      "options": ["Love and Gratitude", "Statutes", "Force", "Profit"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Peace is maintained through:",
+      "options": ["Right relationship and understanding", "Control and dominance", "Military intervention", "Silence and fear"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is the natural state of a lawful people?",
+      "options": ["Freedom and responsibility", "Dependence", "Subjugation", "Anarchy"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Restoration of true law requires:",
+      "options": ["Awareness, unity, and lawful action", "Corporate lobbying", "Political influence", "Foreign aid"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Completion of the quiz signifies:",
+      "options": [
+        "Readiness to participate in lawful self-governance",
+        "Graduation into maritime administration",
+        "Entry into commercial politics",
+        "Membership in a legal corporation"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
