@@ -1,0 +1,157 @@
+/* =======================================
+   Correct your Status — Quiz Theme
+   ======================================= */
+
+/* Page */
+:root {
+  --blue: #0073aa;
+  --blue-dark: #005f87;
+  --ink: #003366;
+  --bg: #f5f9fc;
+  --card: #ffffff;
+  --soft: #d6eaf8;
+  --success: #d8f7d3;
+  --warning: #f9d3d3;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: #1e2a38;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#container {
+  background: var(--card);
+  margin: 24px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.1);
+  width: min(92%, 740px);
+  padding: 24px 28px;
+  text-align: center;
+}
+
+/* Header */
+#tsaaHeader {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid var(--blue);
+  padding-bottom: 10px;
+  margin-bottom: 16px;
+}
+
+#tsaaLogo {
+  width: 70px;
+  height: auto;
+  filter: drop-shadow(0 0 2px rgba(0,115,170,.3));
+}
+
+h1 {
+  color: var(--ink);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+/* Titles & progress */
+#levelTitle {
+  color: var(--blue);
+  font-weight: 600;
+  margin: 10px 0 16px;
+}
+
+#progress {
+  height: 14px;
+  background: var(--soft);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 auto 18px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: var(--blue);
+  transition: width .35s ease;
+}
+
+/* Question */
+.question { margin: 10px 0 16px; }
+
+button.option {
+  display: block;
+  width: 100%;
+  background: #f9fcff;
+  border: 1px solid var(--blue);
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 1rem;
+  padding: 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: background .2s, color .2s, transform .02s;
+}
+
+button.option:hover { background: var(--blue); color: #fff; }
+button.option:active { transform: scale(.995); }
+
+/* Controls */
+#controls { display: flex; gap: 10px; justify-content: center; margin-top: 12px; }
+
+#nextBtn, #resetAllBtn {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background .25s ease;
+}
+#nextBtn:hover, #resetAllBtn:hover { background: var(--blue-dark); }
+
+.hidden { display: none !important; }
+
+/* Results */
+#result {
+  background: #f0f8ff;
+  border: 1px solid #b0d4e3;
+  border-radius: 10px;
+  padding: 18px;
+  margin-top: 18px;
+}
+
+/* Volunteer modal */
+#volunteerModal {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,.35);
+  display: grid; place-items: center;
+  z-index: 9999;
+}
+#volunteerModal .modal-content {
+  background: #fff;
+  width: min(92%, 520px);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.2);
+}
+#volunteerModal h3 { margin: 0 0 8px; color: var(--ink); }
+#volunteerModal .modal-buttons {
+  display: flex; gap: 10px; justify-content: flex-end; margin-top: 12px;
+}
+#volunteerModal .modal-buttons button {
+  background: var(--blue);
+  color: #fff; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer;
+}
+#volunteerModal .modal-buttons button.secondary {
+  background: #e7eef6; color: var(--ink);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  h1 { font-size: 1.3rem; }
+  #container { padding: 20px; }
+  button.option { font-size: 1.02rem; }
+}
