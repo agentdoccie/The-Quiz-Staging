@@ -1,0 +1,57 @@
+{
+  "level": 4,
+  "title": "Lawful Governance and Public Law",
+  "summary": "This level explores lawful assemblies, the role of Public Law, and the difference between government by contract and government by consent.",
+  "questions": [
+    {
+      "question": "What defines a lawful government?",
+      "options": ["Consent of the governed", "Corporate registration", "Military enforcement", "Political parties"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Public Law is based on:",
+      "options": ["The will of the living people", "Private contracts", "Administrative policies", "Commercial codes"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lawful Assemblies operate through what process?",
+      "options": ["Consensus and recorded minutes", "Statutory voting", "Corporate orders", "Executive decrees"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In lawful governance, power flows:",
+      "options": ["From the people to the offices they create", "From offices to the people", "From corporations downward", "From military command"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Public officials are:",
+      "options": ["Servants of the people under oath", "Corporate executives", "Elected shareholders", "Foreign officers"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What principle prevents abuse of office?",
+      "options": ["Accountability to Public Law", "Immunity from prosecution", "Corporate indemnity", "Political immunity"],
+      "correctIndex": 0
+    },
+    {
+      "question": "A lawful Assembly records decisions as:",
+      "options": ["Public Record", "Private Memos", "Corporate Bylaws", "Confidential Notes"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The true purpose of lawful government is to:",
+      "options": ["Protect rights and keep the peace", "Expand jurisdiction", "Regulate commerce", "Collect revenue"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What defines lawful authority?",
+      "options": ["Delegated power from the people", "Corporate policy", "Military orders", "Statutory rules"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lawful governance operates through:",
+      "options": ["Assemblies, councils, and recorded public notice", "Private boards", "Political campaigns", "Executive contracts"],
+      "correctIndex": 0
+    }
+  ]
+}
