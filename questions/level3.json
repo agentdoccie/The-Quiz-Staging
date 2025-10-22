@@ -1,0 +1,62 @@
+{
+  "level": 3,
+  "title": "Status Correction and Identity",
+  "summary": "Learn how to reclaim your lawful name and status, moving from a corporate PERSON back to a living man or woman on the land.",
+  "questions": [
+    {
+      "question": "What is the corporate PERSON?",
+      "options": ["A legal fiction created by registration", "Your living self", "Your church record", "A lawful titleholder"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why must status correction be recorded publicly?",
+      "options": ["To give lawful notice and establish your standing", "For private filing only", "To apply for benefits", "To register as an employee"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Where does your lawful name exist?",
+      "options": ["On the land and soil jurisdiction", "In maritime records", "In government trust ledgers", "In commercial registries"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The act of 'reconveyance' means:",
+      "options": [
+        "Moving property or title back from sea to land jurisdiction",
+        "Selling land to the state",
+        "Assigning it to a trust",
+        "Cancelling a mortgage"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "A lawful man or woman stands under which law?",
+      "options": ["Public Law", "Private Corporate Law", "Maritime Code", "Military Regulations"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What document typically accompanies your reconveyance?",
+      "options": ["Common Carry Declaration", "Business Registration", "Corporate License", "Maritime Permit"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Why must witnesses sign your reconveyance?",
+      "options": ["To affirm it was done knowingly and lawfully", "To satisfy corporate registry rules", "To make it appear official", "To grant court approval"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Who controls the corporate PERSON before status correction?",
+      "options": ["Foreign corporations and trusts", "The lawful man or woman", "The Assembly", "The local community"],
+      "correctIndex": 0
+    },
+    {
+      "question": "After correction, who holds lawful title to your estate?",
+      "options": ["You, the living man or woman", "The Registrar", "The Municipal Court", "A corporate agent"],
+      "correctIndex": 0
+    },
+    {
+      "question": "What principle underlies all lawful correction?",
+      "options": ["Truth and Notice", "Silence and Consent", "Profit and Loss", "Force and Fear"],
+      "correctIndex": 0
+    }
+  ]
+}
