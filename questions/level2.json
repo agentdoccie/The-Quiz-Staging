@@ -1,0 +1,62 @@
+{
+  "level": 2,
+  "title": "Jurisdictions and Law",
+  "summary": "This level explains the three main jurisdictions — land, air, and sea — and how they relate to self-governance and Common Law.",
+  "questions": [
+    {
+      "question": "Which jurisdiction is the highest and relates to spiritual matters?",
+      "options": ["Air", "Land", "Sea", "Corporate"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The land and soil jurisdiction deals primarily with what?",
+      "options": [
+        "Living men and women and their property",
+        "Maritime trade",
+        "Corporate agreements",
+        "International policy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which jurisdiction operates under Admiralty (Maritime) Law?",
+      "options": ["Sea", "Air", "Land", "Ecclesiastical"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The Assembly restores the lawful position of people on which jurisdiction?",
+      "options": ["Land and Soil", "Sea and Air", "Municipal", "Corporate"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which law form derives directly from Natural Law?",
+      "options": ["Common Law", "Statutory Law", "Maritime Law", "Civil Code"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Maritime Law applies to which entities?",
+      "options": ["Ships, corporations, and legal persons", "Living men and women", "Ecclesiastical courts", "Common Law courts"],
+      "correctIndex": 0
+    },
+    {
+      "question": "The Assembly’s lawful courts are based on which jurisdiction?",
+      "options": ["Land and Soil", "Sea", "Air", "Corporate"],
+      "correctIndex": 0
+    },
+    {
+      "question": "In Common Law, disputes are resolved by whom?",
+      "options": ["A jury of peers", "A maritime judge", "Corporate tribunal", "Foreign officials"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Statutory law applies primarily to whom?",
+      "options": ["Corporate PERSONS", "Living people", "Lawful assemblies", "Sovereign nations"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Lawful governance begins by operating under which law?",
+      "options": ["Public Law and Common Law", "Private Corporate Law", "Admiralty Regulations", "Municipal Statutes"],
+      "correctIndex": 0
+    }
+  ]
+}
