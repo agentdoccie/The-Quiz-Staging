@@ -1,0 +1,107 @@
+{
+  "level": 1,
+  "title": "Fundamentals of the South African Assembly",
+  "summary": "This level introduces the purpose, structure, and lawful foundation of The South African Assembly (TSAA).",
+  "questions": [
+    {
+      "question": "What is the primary mission of The South African Assembly (TSAA)?",
+      "options": [
+        "To reconstruct lawful self-governance under Common Law",
+        "To replace the existing government",
+        "To form a political party",
+        "To collect taxes for the state"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What does TSAA stand for?",
+      "options": [
+        "The South African Assembly",
+        "The Sovereign African Authority",
+        "Trade Services of Africa",
+        "Territorial State Administrative Agency"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which law form does TSAA operate under?",
+      "options": [
+        "Common Law",
+        "Maritime Law",
+        "Corporate Law",
+        "Civil Law"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "TSAA is described as what kind of organization?",
+      "options": [
+        "Non-political, non-corporate lawful assembly",
+        "Registered political party",
+        "Private banking institution",
+        "Foreign NGO"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "TSAA aims to repopulate which jurisdiction?",
+      "options": [
+        "Land and Soil jurisdiction",
+        "Sea and Air jurisdiction",
+        "Municipal jurisdiction",
+        "Corporate trust jurisdiction"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "Which principle guides TSAA’s actions?",
+      "options": [
+        "Peace, Love, and Law",
+        "Profit and Competition",
+        "Control and Compliance",
+        "Politics and Power"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What is required to join TSAA?",
+      "options": [
+        "Correct your political status and declare yourself living",
+        "Register as a business entity",
+        "Take an oath of office",
+        "Pay a membership fee"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "What color flag represents peace under the Assembly?",
+      "options": [
+        "White Civil Peace Flag",
+        "Blue Admiralty Flag",
+        "Red War Flag",
+        "Black Corporate Flag"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "TSAA operates lawfully through which system?",
+      "options": [
+        "Lawful Assemblies of the People",
+        "Corporate courts",
+        "Military administration",
+        "Foreign consulates"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "question": "The Assembly’s work is focused on restoring what?",
+      "options": [
+        "Lawful self-governance and peace",
+        "New political control",
+        "Tax collection systems",
+        "Foreign trade monopolies"
+      ],
+      "correctIndex": 0
+    }
+  ]
+}
