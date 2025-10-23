@@ -1,288 +1,227 @@
 {
   "level": 1,
-  "title": "Foundation of Law & Identity",
-  "summary": "Level 1 introduces the living law of the land, natural rights, and the importance of understanding your lawful identity as a man or woman under public law. These foundational truths prepare you to recognize the difference between lawful self-governance and corporate control.",
+  "title": "Fundamentals of the Southern African Assembly",
+  "summary": "Level 1 introduces the lawful foundations of the Southern African Assembly (TSAA): the mission, principles of sovereignty, Common Law, and self-governance.",
   "questions": [
     {
-      "question": "What are the two foundational principles of all true law according to TSAA teachings?",
+      "topic": "Mission",
+      "question": "What is the primary mission of the Southern African Assembly (TSAA)?",
       "options": [
-        "Love and Gratitude",
-        "Fear and Control",
-        "Obedience and Punishment",
-        "Profit and Power"
+        "To reconstruct lawful self-governance under Common Law",
+        "To promote commercial legislation",
+        "To campaign in political elections",
+        "To establish a private corporation"
       ],
-      "correctIndex": 0,
-      "topic": "Natural Law"
+      "correctIndex": 0
     },
     {
-      "question": "Under natural law, who is the ultimate authority over a living man or woman?",
+      "topic": "Identity",
+      "question": "What does TSAA help individuals correct?",
       "options": [
-        "Their own conscience guided by divine law",
-        "The president or prime minister",
-        "A judge of the high court",
-        "The nearest corporate officer"
+        "Their political status and lawful identity",
+        "Their banking details",
+        "Their postal address",
+        "Their social media name"
       ],
-      "correctIndex": 0,
-      "topic": "Authority"
+      "correctIndex": 0
     },
     {
-      "question": "What is meant by 'living law'?",
+      "topic": "Law",
+      "question": "Which law does TSAA operate under?",
       "options": [
-        "Law that arises from life itself and respects free will",
-        "Statutes created by parliaments",
-        "Corporate policy manuals",
-        "Rules of commerce between companies"
+        "Common Law and Natural Law",
+        "Corporate Maritime Law",
+        "Municipal Statutory Codes",
+        "International Trade Law"
       ],
-      "correctIndex": 0,
-      "topic": "Living Law"
+      "correctIndex": 0
     },
     {
-      "question": "In lawful self-governance, what does 'sovereignty' truly mean?",
+      "topic": "Purpose",
+      "question": "Why is 'status correction' important in TSAA teachings?",
       "options": [
-        "Personal responsibility and self-governance under natural law",
-        "Owning property without paying taxes",
-        "Having power over others",
-        "Being free from all moral obligations"
+        "It reclaims lawful standing as a living man or woman on the land",
+        "It grants voting privileges",
+        "It allows international travel",
+        "It reduces tax obligations"
       ],
-      "correctIndex": 0,
-      "topic": "Sovereignty"
+      "correctIndex": 0
     },
     {
-      "question": "According to TSAA, what was lost when people accepted corporate 'citizenship'?",
+      "topic": "Principles",
+      "question": "Which phrase reflects TSAA’s guiding ethos?",
       "options": [
-        "Their lawful standing as living men and women on the land",
-        "The right to vote",
-        "The ability to hold a driver’s licence",
-        "Their bank accounts"
+        "Peace, Love, and Law",
+        "Profit and Policy",
+        "Power and Obedience",
+        "Politics and Control"
       ],
-      "correctIndex": 0,
-      "topic": "Status Correction"
+      "correctIndex": 0
     },
     {
-      "question": "What is the difference between lawful and legal?",
+      "topic": "Structure",
+      "question": "What type of organization is TSAA?",
       "options": [
-        "Lawful refers to natural and public law; legal refers to corporate rules",
-        "They mean exactly the same thing",
-        "Lawful applies only to businesses",
-        "Legal applies only to religious institutions"
+        "A lawful unincorporated assembly of living people",
+        "A political party",
+        "A religious body",
+        "A government department"
       ],
-      "correctIndex": 0,
-      "topic": "Lawful vs Legal"
+      "correctIndex": 0
     },
     {
-      "question": "What defines a 'person' in corporate or maritime law?",
+      "topic": "Sovereignty",
+      "question": "What does personal sovereignty mean under Common Law?",
       "options": [
-        "A legal fiction or corporate construct",
-        "A living man or woman",
-        "A natural soul recognized by God",
-        "An unregistered family name"
+        "Self-governance and responsibility under Natural Law",
+        "Independence from moral duty",
+        "Control over others",
+        "Owning a business"
       ],
-      "correctIndex": 0,
-      "topic": "Legal Person"
+      "correctIndex": 0
     },
     {
-      "question": "Why is understanding the difference between a living being and a legal person essential?",
+      "topic": "Education",
+      "question": "What knowledge does TSAA promote?",
       "options": [
-        "Because the legal person is subject to corporate law while the living being is not",
-        "Because it changes the way taxes are paid",
-        "Because it determines voting eligibility",
-        "Because it affects employment opportunities"
+        "Lawful conduct, peacekeeping, and self-governance",
+        "Corporate management skills",
+        "Political negotiation",
+        "Economic forecasting"
       ],
-      "correctIndex": 0,
-      "topic": "Identity"
+      "correctIndex": 0
     },
     {
-      "question": "What is the lawful foundation of all self-governing assemblies?",
+      "topic": "Jurisdictions",
+      "question": "Which three jurisdictions exist on Earth?",
       "options": [
-        "Peace, good faith, and mutual respect",
-        "Profit, secrecy, and obedience",
-        "Political campaigning",
-        "Corporate charters"
+        "Air, Land, and Sea",
+        "Fire, Earth, and Water",
+        "Local, National, and International",
+        "Public, Private, and Corporate"
       ],
-      "correctIndex": 0,
-      "topic": "Assemblies"
+      "correctIndex": 0
     },
     {
-      "question": "What is a Public Law Assembly?",
+      "topic": "Community",
+      "question": "TSAA identifies its members as:",
       "options": [
-        "An unincorporated group of living men and women keeping the peace and administering the land",
-        "A commercial company formed under the Companies Act",
-        "A government ministry",
-        "A court of maritime jurisdiction"
+        "Living men and women of the land",
+        "Corporate citizens",
+        "Government employees",
+        "Registered voters"
       ],
-      "correctIndex": 0,
-      "topic": "Public Law Assembly"
-    },
-
-    /* --- Medium Difficulty Section --- */
-
-    {
-      "question": "Why must lawful documents be signed with an autograph instead of a signature?",
-      "options": [
-        "An autograph represents the living being; a signature represents a corporate agent",
-        "It looks more artistic",
-        "It avoids paying stamp duty",
-        "It is faster to write"
-      ],
-      "correctIndex": 0,
-      "topic": "Autograph vs Signature"
+      "correctIndex": 0
     },
     {
-      "question": "What does TSAA mean by 'returning to the land and soil jurisdiction'?",
-      "options": [
-        "Reclaiming one’s lawful standing as a living man or woman under natural law",
-        "Purchasing rural property",
-        "Becoming a farmer",
-        "Registering with a corporation"
-      ],
-      "correctIndex": 0,
-      "topic": "Land and Soil Jurisdiction"
-    },
-    {
-      "question": "Which law form governs the sea or commerce?",
-      "options": [
-        "Admiralty or maritime law",
-        "Common law of the land",
-        "Ecclesiastical law",
-        "Natural law"
-      ],
-      "correctIndex": 0,
-      "topic": "Maritime Law"
-    },
-    {
-      "question": "Which law form governs living people on the land?",
-      "options": [
-        "Common or Public Law",
-        "Maritime law",
-        "Corporate commercial law",
-        "Banking regulations"
-      ],
-      "correctIndex": 0,
-      "topic": "Common Law"
-    },
-    {
-      "question": "What is the ultimate purpose of lawful government?",
-      "options": [
-        "To serve and protect the people’s rights and property",
-        "To collect taxes for foreign powers",
-        "To manage international trade",
-        "To regulate corporate profits"
-      ],
-      "correctIndex": 0,
-      "topic": "Purpose of Government"
-    },
-    {
-      "question": "In lawful terms, what does the word 'state' originally refer to?",
-      "options": [
-        "The condition or status of being — not a corporate territory",
-        "A provincial subdivision of government",
-        "An incorporated entity",
-        "A national flag or emblem"
-      ],
-      "correctIndex": 0,
-      "topic": "Meaning of State"
-    },
-    {
-      "question": "What principle separates the living jurisdiction from the legal jurisdiction?",
-      "options": [
-        "Consent",
-        "Money",
-        "Nationality",
-        "Voting registration"
-      ],
-      "correctIndex": 0,
-      "topic": "Consent"
-    },
-    {
-      "question": "According to TSAA, why are people called 'citizens' in corporate systems?",
-      "options": [
-        "Because they are considered property or employees of the corporation",
-        "Because it honors their sovereignty",
-        "Because it reflects ancient tribal membership",
-        "Because it ensures public accountability"
-      ],
-      "correctIndex": 0,
-      "topic": "Corporate Citizenship"
-    },
-    {
-      "question": "How does a man or woman reclaim their lawful estate?",
-      "options": [
-        "By recording their status correction and reconveyance to the land and soil jurisdiction",
-        "By paying all debts to the state",
-        "By applying for a passport",
-        "By voting in corporate elections"
-      ],
-      "correctIndex": 0,
-      "topic": "Reclaiming Estate"
-    },
-    {
-      "question": "What does it mean to 'record, not register'?",
-      "options": [
-        "Recording places ownership on the public record; registration surrenders it to another authority",
-        "Both are the same action",
-        "Recording is illegal without registration",
-        "Registration ensures privacy"
-      ],
-      "correctIndex": 0,
-      "topic": "Recording vs Registration"
-    },
-
-    /* --- Advanced Section --- */
-
-    {
-      "question": "Why do lawful assemblies avoid political affiliations?",
-      "options": [
-        "Because politics divides the people and lawful assemblies operate in peace and unity",
-        "Because it is illegal to vote",
-        "Because they are apolitical corporations",
-        "Because politics is too complicated"
-      ],
-      "correctIndex": 0,
-      "topic": "Apolitical Assemblies"
-    },
-    {
-      "question": "How is 'common law' distinguished from 'statutory law'?",
-      "options": [
-        "Common law is based on customs and moral principles; statutory law is written by legislatures",
-        "Common law only applies in courts of record",
-        "Statutory law is always superior",
-        "They are the same in modern use"
-      ],
-      "correctIndex": 0,
-      "topic": "Common vs Statutory"
-    },
-    {
-      "question": "What document acts as living proof of your lawful intent to self-govern?",
-      "options": [
-        "The Common Carry Declaration",
-        "A corporate ID card",
-        "A driver’s licence",
-        "A tax certificate"
-      ],
-      "correctIndex": 0,
-      "topic": "Common Carry Declaration"
-    },
-    {
-      "question": "What is the purpose of the Public Law Assembly’s Coordinators?",
-      "options": [
-        "To assist others in correcting their status and keeping the peace",
-        "To collect fees",
-        "To create new statutes",
-        "To enforce corporate policies"
-      ],
-      "correctIndex": 0,
-      "topic": "Assembly Coordinators"
-    },
-    {
-      "question": "Which phrase best summarizes lawful living?",
+      "topic": "Common Law",
+      "question": "Common Law is based on which core idea?",
       "options": [
         "Do no harm, cause no loss, keep the peace",
-        "Follow every government order",
-        "Maximize profits",
-        "Win legal arguments"
+        "Obey written statutes",
+        "Serve corporate interests",
+        "Follow parliamentary orders"
       ],
-      "correctIndex": 0,
-      "topic": "Lawful Living"
+      "correctIndex": 0
+    },
+    {
+      "topic": "Authority",
+      "question": "Under Natural Law, who holds final authority over a man or woman?",
+      "options": [
+        "Their conscience guided by divine law",
+        "A corporate judge",
+        "A political leader",
+        "An international court"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Consent",
+      "question": "Why is consent vital in lawful dealings?",
+      "options": [
+        "Because without it, no contract or lawful authority exists",
+        "Because it simplifies paperwork",
+        "Because it increases profit",
+        "Because it is required by banks"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Registration",
+      "question": "What does registration often do under corporate law?",
+      "options": [
+        "Transfers ownership or control to another entity",
+        "Protects your property fully",
+        "Erases public records",
+        "Creates lawful independence"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Autograph",
+      "question": "Why should lawful documents be autographed rather than signed?",
+      "options": [
+        "An autograph represents the living being; a signature represents a corporate agent",
+        "It prevents ink fading",
+        "It is a modern style",
+        "It makes filing easier"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Peacekeeping",
+      "question": "What is the Assembly’s primary duty?",
+      "options": [
+        "To keep the peace and uphold Public Law",
+        "To issue taxes",
+        "To enforce maritime statutes",
+        "To compete politically"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Government",
+      "question": "What is the true purpose of lawful government?",
+      "options": [
+        "To protect rights, property, and peace",
+        "To manage corporate trade",
+        "To expand jurisdiction overseas",
+        "To fund political campaigns"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Equality",
+      "question": "According to Natural Law, all people are:",
+      "options": [
+        "Equal in rights and responsibility under creation",
+        "Classified by citizenship status",
+        "Ranked by wealth",
+        "Governed by hierarchy"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Notice",
+      "question": "Why must lawful notice be given before enforcement?",
+      "options": [
+        "Because no one can be held to a law they have not been informed of",
+        "Because it looks official",
+        "Because it satisfies bureaucracy",
+        "Because it ensures profit"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "topic": "Lawful Living",
+      "question": "Which phrase best describes lawful living?",
+      "options": [
+        "Do no harm, cause no loss, keep the peace",
+        "Obey every statute",
+        "Maximize financial gain",
+        "Follow corporate orders"
+      ],
+      "correctIndex": 0
     }
   ]
 }
