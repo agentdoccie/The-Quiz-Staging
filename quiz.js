@@ -1,43 +1,34 @@
 // ===============================
 // The Southern African Assembly – Correct Your Status Quiz
-// Stable randomization & 10-question display fix
+// Stable Redundant Build (vFinal)
 // ===============================
 
-const basePath = "/The-Quiz-Staging/";
+// --- Configuration ---
 const PASSING_SCORE = 70;
 const VOLUNTEER_TRIGGER = 80;
-const MAX_LEVEL = 100;
-const KNOWN_LEVELS = [1, 2, 3, 4, 5];
+const TOTAL_LEVELS = 100;
 
+// --- Universal base path for GitHub Pages ---
+const basePath = window.location.pathname.includes("The-Quiz-Staging")
+  ? "/The-Quiz-Staging/"
+  : "/";
+
+// --- State variables ---
 let currentLevel = parseInt(localStorage.getItem("tsaaLevel")) || 1;
 let currentQuestion = 0;
 let score = 0;
 let levelData = [];
 let playerName = localStorage.getItem("playerName") || "";
 
+// --- Elements ---
 const quizContainer = document.getElementById("quiz");
 const nextBtn = document.getElementById("nextBtn");
 const resultContainer = document.getElementById("result");
+const restartBtn = document.getElementById("restartBtn");
 const progressBar = document.getElementById("progressBar");
 const levelTitle = document.getElementById("levelTitle");
-const resetAllBtn = document.getElementById("resetAllBtn");
 
-// --- Utility ---
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-function sampleN(array, n) {
-  const copy = [...array];
-  shuffle(copy);
-  return copy.slice(0, n);
-}
-
-// --- Welcome screen ---
+// --- Welcome screen: create once, wire once ---
 function ensureWelcomeScreen() {
   let screen = document.getElementById("welcomeScreen");
   if (!screen) {
@@ -46,25 +37,43 @@ function ensureWelcomeScreen() {
     screen.innerHTML = `
       <h2>Welcome to the Southern African Assembly Knowledge Quiz</h2>
       <p>Please enter your name to begin:</p>
-      <input type="text" id="playerNameInput" placeholder="Your full name" />
+      <input type="text" id="playerNameInput" placeholder="Your full name" autocomplete="name" />
       <button id="startQuizBtn" type="button">Start Quiz</button>
     `;
-    document.getElementById("container").prepend(screen);
+    const container = document.getElementById("container");
+    container && container.firstChild
+      ? container.insertBefore(screen, container.firstChild)
+      : container.appendChild(screen);
   }
 
   const startBtn = document.getElementById("startQuizBtn");
-  startBtn.onclick = null;
-  startBtn.addEventListener("click", () => {
-    const nameInput = document.getElementById("playerNameInput").value.trim();
-    if (nameInput.length < 2) {
-      alert("Please enter your full name to continue.");
-      return;
-    }
-    playerName = nameInput;
-    localStorage.setItem("playerName", playerName);
-    screen.classList.add("hidden");
-    startQuiz();
-  });
+  if (startBtn) {
+    startBtn.onclick = null;
+    startBtn.addEventListener(
+      "click",
+      (e) => {
+        e.preventDefault();
+        const input = document.getElementById("playerNameInput");
+        const nameInput = (input?.value || "").trim();
+        if (nameInput.length < 2) {
+          alert("Please enter your full name to continue.");
+          input?.focus();
+          return;
+        }
+        playerName = nameInput;
+        localStorage.setItem("playerName", playerName);
+        screen.classList.add("hidden");
+        startQuiz();
+      },
+      { passive: true }
+    );
+  }
+
+  quizContainer.classList.add("hidden");
+  nextBtn.classList.add("hidden");
+  restartBtn.classList.add("hidden");
+  resultContainer.classList.add("hidden");
+  screen.classList.remove("hidden");
 }
 
 // --- Boot ---
@@ -76,72 +85,89 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// --- Core Game Start ---
 function startQuiz() {
   quizContainer.classList.remove("hidden");
   loadLevel(currentLevel);
 }
 
-// --- Load Level ---
-async function loadLevel(level) {
-  levelTitle.textContent = "";
-  quizContainer.innerHTML = "";
+// --- Load Level (Redundant Safe) ---
+function loadLevel(level, retry = false) {
+  quizContainer.classList.remove("hidden");
   resultContainer.classList.add("hidden");
+  restartBtn.classList.add("hidden");
   nextBtn.classList.add("hidden");
   progressBar.style.width = "0%";
-  score = 0;
-  currentQuestion = 0;
+  quizContainer.innerHTML = "";
 
-  try {
-    const res = await fetch(`${basePath}questions/level${level}.json?v=${Date.now()}`);
-    if (!res.ok) throw new Error("File not found");
-    const json = await res.json();
+  const url = `${basePath}questions/level${level}.json`;
 
-    levelTitle.textContent = `Level ${json.level}: ${json.title || ""}`;
+  fetch(url)
+    .then((res) => {
+      if (!res.ok) throw new Error(`Level ${level} file not found`);
+      return res.json();
+    })
+    .then((data) => {
+      levelData = shuffleArray(data.questions || []).slice(0, 10);
+      currentQuestion = 0;
+      score = 0;
 
-    // --- NEW FIX: randomize & trim to 10 ---
-    levelData = prepareLevelData(json.questions || []);
+      if (levelTitle) {
+        levelTitle.innerHTML = `Level ${data.level}: ${data.title || ""}`;
+      }
 
-    quizContainer.innerHTML = `
-      <div class="summary-card">
-        <h3>Level Overview</h3>
-        <p>${json.summary || ""}</p>
-        <button id="startLevelBtn">Start Level ${json.level}</button>
-      </div>
-    `;
+      if (data.summary) {
+        quizContainer.innerHTML = `
+          <div class="summary-card">
+            <h3>Level Overview</h3>
+            <p>${data.summary}</p>
+            <button id="startLevelBtn">Start Level ${data.level}</button>
+          </div>
+        `;
+        nextBtn.classList.add("hidden");
+        const startBtn = document.getElementById("startLevelBtn");
+        if (startBtn) {
+          startBtn.addEventListener("click", () => {
+            nextBtn.classList.remove("hidden");
+            loadQuestion();
+          });
+        }
+        return;
+      }
 
-    document.getElementById("startLevelBtn").addEventListener("click", () => {
       loadQuestion();
       nextBtn.classList.remove("hidden");
+    })
+    .catch((err) => {
+      console.error("Error loading level:", err);
+      if (!retry) {
+        console.warn("Retrying level load once...");
+        setTimeout(() => loadLevel(level, true), 800);
+        return;
+      }
+      quizContainer.innerHTML = `
+        <p style="color:#b22222;">⚠️ Could not load Level ${level}.<br>
+        Please ensure <strong>questions/level${level}.json</strong> exists or refresh the page.</p>
+      `;
+      nextBtn.classList.add("hidden");
+      resultContainer.classList.add("hidden");
+      restartBtn.classList.remove("hidden");
     });
-  } catch (err) {
-    console.error("Error loading level:", err);
-    quizContainer.innerHTML = `<p style="color:#b22222;">⚠️ Could not load Level ${level}. Try again later.</p>`;
-  }
 }
 
-// --- Randomize questions & answers ---
-function prepareLevelData(allQuestions) {
-  const selected = sampleN(allQuestions, Math.min(10, allQuestions.length));
-  return selected.map((q) => {
-    const answers = q.options.map((text, idx) => ({
-      text,
-      isCorrect: idx === q.correctIndex,
-    }));
-    shuffle(answers);
-    return {
-      question: q.question,
-      options: answers.map((a) => a.text),
-      correctIndex: answers.findIndex((a) => a.isCorrect),
-    };
-  });
+// --- Shuffle Helper ---
+function shuffleArray(arr) {
+  return arr
+    .map((val) => ({ val, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ val }) => val);
 }
 
-// --- Render a question ---
+// --- Display Question ---
 function loadQuestion() {
   const q = levelData[currentQuestion];
-  if (!q) return finishLevel();
+  progressBar.style.width = `${((currentQuestion + 1) / levelData.length) * 100}%`;
 
-  progressBar.style.width = `${(currentQuestion / levelData.length) * 100}%`;
   quizContainer.innerHTML = `
     <div class="question">
       <h3>Question ${currentQuestion + 1} of ${levelData.length}</h3>
@@ -149,18 +175,20 @@ function loadQuestion() {
     </div>
   `;
 
-  q.options.forEach((option, i) => {
+  const shuffledOptions = shuffleArray([...q.options]);
+
+  shuffledOptions.forEach((option) => {
     const btn = document.createElement("button");
     btn.textContent = option;
-    btn.className = "option";
-    btn.addEventListener("click", () => selectAnswer(i, btn));
+    btn.classList.add("option");
+    btn.addEventListener("click", () => selectAnswer(q.options.indexOf(option), btn));
     quizContainer.appendChild(btn);
   });
 
   nextBtn.disabled = true;
 }
 
-// --- Select answer ---
+// --- Handle Answer ---
 function selectAnswer(index, btn) {
   levelData[currentQuestion].selected = index;
   nextBtn.disabled = false;
@@ -168,7 +196,7 @@ function selectAnswer(index, btn) {
   btn.style.background = "#c5f2cc";
 }
 
-// --- Next / finish ---
+// --- Next Question / Progression ---
 nextBtn.addEventListener("click", () => {
   const current = levelData[currentQuestion];
   if (current.selected === current.correctIndex) score++;
@@ -177,22 +205,25 @@ nextBtn.addEventListener("click", () => {
   else finishLevel();
 });
 
-// --- Finish level ---
+// --- Finish Level ---
 function finishLevel() {
   progressBar.style.width = "100%";
-  const total = levelData.length || 1;
+  const total = levelData.length;
   const percent = (score / total) * 100;
 
-  quizContainer.innerHTML = "";
+  quizContainer.classList.add("hidden");
   nextBtn.classList.add("hidden");
   resultContainer.classList.remove("hidden");
-  resultContainer.style.background = percent >= PASSING_SCORE ? "#d8f7d3" : "#f9d3d3";
+  restartBtn.classList.remove("hidden");
 
-  const feedback =
+  let color = percent >= PASSING_SCORE ? "#d8f7d3" : "#f9d3d3";
+  resultContainer.style.background = color;
+
+  let feedback =
     percent >= 90
       ? "🌟 Excellent! You’ve mastered this level."
       : percent >= 70
-      ? "✅ Great job! You passed and built strong understanding."
+      ? "✅ Great job! You passed this level."
       : "⚠️ Keep going! Try again for a higher score.";
 
   resultContainer.innerHTML = `
@@ -204,19 +235,27 @@ function finishLevel() {
 
   if (percent >= VOLUNTEER_TRIGGER) showVolunteerPrompt();
 
-  if (percent >= PASSING_SCORE && currentLevel < MAX_LEVEL) {
-    const nextLevelBtn = document.createElement("button");
-    nextLevelBtn.textContent = "Next Level";
-    nextLevelBtn.addEventListener("click", () => {
+  let tsaaScores = JSON.parse(localStorage.getItem("tsaaScores")) || {};
+  tsaaScores[`level${currentLevel}`] = percent;
+  localStorage.setItem("tsaaScores", JSON.stringify(tsaaScores));
+
+  if (percent >= PASSING_SCORE && currentLevel < TOTAL_LEVELS) {
+    resultContainer.innerHTML += `<button id="nextLevelBtn">Next Level</button>`;
+    document.getElementById("nextLevelBtn").addEventListener("click", () => {
       currentLevel++;
       localStorage.setItem("tsaaLevel", currentLevel);
       loadLevel(currentLevel);
     });
-    resultContainer.appendChild(nextLevelBtn);
+  } else if (percent < PASSING_SCORE) {
+    setTimeout(() => {
+      if (confirm("Restart from Level 1?")) {
+        resetQuiz();
+      }
+    }, 300);
   }
 }
 
-// --- Volunteer prompt ---
+// --- Volunteer Popup ---
 function showVolunteerPrompt() {
   const overlay = document.createElement("div");
   overlay.id = "volunteerModal";
@@ -243,12 +282,24 @@ function showVolunteerPrompt() {
   });
 }
 
-// --- Restart Quiz ---
-resetAllBtn.addEventListener("click", () => {
-  if (confirm("Restart from Level 1?")) {
-    localStorage.removeItem("tsaaScores");
-    localStorage.removeItem("tsaaLevel");
+// --- Safe Restart Logic ---
+function resetQuiz() {
+  try {
+    localStorage.clear();
     currentLevel = 1;
-    ensureWelcomeScreen();
+    currentQuestion = 0;
+    score = 0;
+    quizContainer.innerHTML = "";
+    resultContainer.classList.add("hidden");
+    nextBtn.classList.add("hidden");
+    restartBtn.classList.add("hidden");
+    setTimeout(() => ensureWelcomeScreen(), 300);
+  } catch (err) {
+    console.error("Restart error:", err);
+    alert("⚠️ Restart encountered a problem — reloading the page...");
+    location.reload();
   }
-});
+}
+
+// --- Restart Button (manual) ---
+restartBtn.addEventListener("click", resetQuiz);
