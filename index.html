@@ -2,53 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>The Southern African Assembly – Correct Your Status Quiz</title>
 
-  <!-- Mobile viewport, safe area, and 100% width/height fixes -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
-  <title>Correct your Status, The Quiz!</title>
-
-  <link rel="icon" href="images/southern-assembly-logo.png" type="image/png" />
+  <link rel="icon" href="southern-assembly-logo.png" type="image/png" />
   <link rel="stylesheet" href="styles/style.css" />
 
-  <!-- Extra safety for mobile layout (prevents half-screen) -->
   <style>
-    html, body { height: 100%; min-height: 100vh; width: 100%; margin: 0; padding: 0; background:#f5f9fc; }
-    body { overflow-x: hidden; }
+    /* Mobile safety net for cutoff issues */
+    html, body {
+      height: 100%;
+      min-height: 100vh;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background-color: #f5f9fc;
+    }
+
+    #container {
+      max-width: 720px;
+      width: 92%;
+      margin: 22px auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 25px 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: calc(100vh - 44px);
+    }
+
+    @media (max-width: 768px) {
+      #container {
+        width: 95%;
+        margin: 10px auto;
+        padding: 18px;
+        min-height: calc(100vh - 20px);
+      }
+    }
   </style>
 </head>
 
 <body>
-  <div id="container" role="main" aria-live="polite">
+  <div id="container">
+
+    <!-- Official Header -->
     <header id="tsaaHeader">
-      <img src="images/southern-assembly-logo.png" alt="Southern African Assembly Logo" id="tsaaLogo" />
-      <h1>Correct your Status, The Quiz!</h1>
+      <img src="southern-assembly-logo.png" alt="Southern African Assembly Logo" id="tsaaLogo" />
+      <h1>The Southern African Assembly – Correct Your Status Quiz</h1>
     </header>
 
-    <h2 id="levelTitle" aria-label="Level title"></h2>
+    <h2 id="levelTitle"></h2>
 
-    <div id="progress" aria-hidden="true">
+    <div id="progress">
       <div id="progressBar"></div>
     </div>
 
-    <!-- Quiz content mounts here -->
     <div id="quiz"></div>
 
-    <!-- Controls -->
-    <div id="controls">
-      <button id="nextBtn" class="hidden" type="button">Next</button>
-      <button id="resetAllBtn" type="button" title="Restart from the beginning">Restart Quiz</button>
+    <div class="controls">
+      <button id="nextBtn">Next</button>
+      <button id="resetAllBtn">Restart Quiz</button>
     </div>
 
-    <!-- Results -->
     <div id="result" class="hidden"></div>
   </div>
-
-  <noscript>
-    <div style="max-width:720px;margin:20px auto;background:#fff;border-radius:12px;padding:16px">
-      This quiz requires JavaScript to run. Please enable JavaScript in your browser and reload the page.
-    </div>
-  </noscript>
 
   <script src="quiz.js"></script>
 </body>
