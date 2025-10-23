@@ -1,272 +1,288 @@
 {
   "level": 1,
-  "title": "Fundamentals of the South African Assembly",
-  "summary": "Level 1 introduces the purpose, values, and lawful foundations of The South African Assembly (TSAA), focusing on Common Law, land and soil jurisdiction, peacekeeping, and responsible self-governance.",
+  "title": "Foundation of Law & Identity",
+  "summary": "Level 1 introduces the living law of the land, natural rights, and the importance of understanding your lawful identity as a man or woman under public law. These foundational truths prepare you to recognize the difference between lawful self-governance and corporate control.",
   "questions": [
     {
-      "question": "What is the primary mission of The South African Assembly (TSAA)?",
-      "options": ["To reconstruct lawful self-governance and keep the peace", "To campaign as a political party", "To replace courts with private councils", "To manage commercial ports under Admiralty law"],
-      "correctIndex": 0
+      "question": "What are the two foundational principles of all true law according to TSAA teachings?",
+      "options": [
+        "Love and Gratitude",
+        "Fear and Control",
+        "Obedience and Punishment",
+        "Profit and Power"
+      ],
+      "correctIndex": 0,
+      "topic": "Natural Law"
     },
     {
-      "question": "TSAA operates under which foundational law form?",
-      "options": ["Common Law derived from Natural Law", "Admiralty Law for maritime trade", "Municipal statutes only", "Private corporate policy"],
-      "correctIndex": 0
+      "question": "Under natural law, who is the ultimate authority over a living man or woman?",
+      "options": [
+        "Their own conscience guided by divine law",
+        "The president or prime minister",
+        "A judge of the high court",
+        "The nearest corporate officer"
+      ],
+      "correctIndex": 0,
+      "topic": "Authority"
     },
     {
-      "question": "What jurisdiction does TSAA repopulate for the living men and women?",
-      "options": ["Land and soil jurisdiction", "High seas jurisdiction", "Municipal administrative zones", "Foreign trust jurisdiction"],
-      "correctIndex": 0
+      "question": "What is meant by 'living law'?",
+      "options": [
+        "Law that arises from life itself and respects free will",
+        "Statutes created by parliaments",
+        "Corporate policy manuals",
+        "Rules of commerce between companies"
+      ],
+      "correctIndex": 0,
+      "topic": "Living Law"
     },
     {
-      "question": "Which phrase best expresses TSAA’s guiding ethos?",
-      "options": ["Peace, Love, and Law", "Profit, Power, and Policy", "War, Sanctions, and Control", "Centralization, Efficiency, and Secrecy"],
-      "correctIndex": 0
+      "question": "In lawful self-governance, what does 'sovereignty' truly mean?",
+      "options": [
+        "Personal responsibility and self-governance under natural law",
+        "Owning property without paying taxes",
+        "Having power over others",
+        "Being free from all moral obligations"
+      ],
+      "correctIndex": 0,
+      "topic": "Sovereignty"
     },
     {
-      "question": "TSAA is best described as:",
-      "options": ["A non-political, non-corporate lawful assembly of people", "A registered political party", "A private banking consortium", "A foreign NGO with diplomatic status"],
-      "correctIndex": 0
+      "question": "According to TSAA, what was lost when people accepted corporate 'citizenship'?",
+      "options": [
+        "Their lawful standing as living men and women on the land",
+        "The right to vote",
+        "The ability to hold a driver’s licence",
+        "Their bank accounts"
+      ],
+      "correctIndex": 0,
+      "topic": "Status Correction"
     },
     {
-      "question": "Which color flag is associated with civil peace under Assembly principles?",
-      "options": ["White peace flag", "Red war flag", "Black corporate flag", "Blue admiralty flag"],
-      "correctIndex": 0
+      "question": "What is the difference between lawful and legal?",
+      "options": [
+        "Lawful refers to natural and public law; legal refers to corporate rules",
+        "They mean exactly the same thing",
+        "Lawful applies only to businesses",
+        "Legal applies only to religious institutions"
+      ],
+      "correctIndex": 0,
+      "topic": "Lawful vs Legal"
     },
     {
-      "question": "Lawful government in Assembly terms is legitimate when it is based on:",
-      "options": ["Consent of the governed", "Military occupation", "Shareholder voting", "International lobbying"],
-      "correctIndex": 0
+      "question": "What defines a 'person' in corporate or maritime law?",
+      "options": [
+        "A legal fiction or corporate construct",
+        "A living man or woman",
+        "A natural soul recognized by God",
+        "An unregistered family name"
+      ],
+      "correctIndex": 0,
+      "topic": "Legal Person"
     },
     {
-      "question": "In the Assembly framework, who are public officials?",
-      "options": ["Servants of the people under oath to Public Law", "Corporate directors under contract", "Foreign officers on secondment", "Private arbiters in equity courts"],
-      "correctIndex": 0
+      "question": "Why is understanding the difference between a living being and a legal person essential?",
+      "options": [
+        "Because the legal person is subject to corporate law while the living being is not",
+        "Because it changes the way taxes are paid",
+        "Because it determines voting eligibility",
+        "Because it affects employment opportunities"
+      ],
+      "correctIndex": 0,
+      "topic": "Identity"
     },
     {
-      "question": "The Assembly records decisions and notices as:",
-      "options": ["Public Record", "Private memos", "Confidential board minutes", "Unofficial social posts"],
-      "correctIndex": 0
+      "question": "What is the lawful foundation of all self-governing assemblies?",
+      "options": [
+        "Peace, good faith, and mutual respect",
+        "Profit, secrecy, and obedience",
+        "Political campaigning",
+        "Corporate charters"
+      ],
+      "correctIndex": 0,
+      "topic": "Assemblies"
     },
     {
-      "question": "Which best summarizes TSAA’s focus?",
-      "options": ["Restoring lawful self-governance, responsibility, and peace", "Winning elections for statutory reform", "Expanding maritime jurisdiction inland", "Privatizing public offices"],
-      "correctIndex": 0
+      "question": "What is a Public Law Assembly?",
+      "options": [
+        "An unincorporated group of living men and women keeping the peace and administering the land",
+        "A commercial company formed under the Companies Act",
+        "A government ministry",
+        "A court of maritime jurisdiction"
+      ],
+      "correctIndex": 0,
+      "topic": "Public Law Assembly"
+    },
+
+    /* --- Medium Difficulty Section --- */
+
+    {
+      "question": "Why must lawful documents be signed with an autograph instead of a signature?",
+      "options": [
+        "An autograph represents the living being; a signature represents a corporate agent",
+        "It looks more artistic",
+        "It avoids paying stamp duty",
+        "It is faster to write"
+      ],
+      "correctIndex": 0,
+      "topic": "Autograph vs Signature"
     },
     {
-      "question": "Common Law is most closely aligned with:",
-      "options": ["Natural Law and the rights of living men and women", "Commercial code for vessels", "Municipal ordinance schedules", "Internal corporate compliance rules"],
-      "correctIndex": 0
+      "question": "What does TSAA mean by 'returning to the land and soil jurisdiction'?",
+      "options": [
+        "Reclaiming one’s lawful standing as a living man or woman under natural law",
+        "Purchasing rural property",
+        "Becoming a farmer",
+        "Registering with a corporation"
+      ],
+      "correctIndex": 0,
+      "topic": "Land and Soil Jurisdiction"
     },
     {
-      "question": "In Assembly understanding, what is the corporate PERSON?",
-      "options": ["A legal fiction created by registration", "The living man/woman on the land", "A lawful sovereign titleholder", "A traditional clan identity"],
-      "correctIndex": 0
+      "question": "Which law form governs the sea or commerce?",
+      "options": [
+        "Admiralty or maritime law",
+        "Common law of the land",
+        "Ecclesiastical law",
+        "Natural law"
+      ],
+      "correctIndex": 0,
+      "topic": "Maritime Law"
     },
     {
-      "question": "Why is Public Law emphasized by TSAA?",
-      "options": ["It expresses the will and protection of the people", "It expedites commercial liens", "It grants maritime salvage rights", "It provides private indemnity to officers"],
-      "correctIndex": 0
+      "question": "Which law form governs living people on the land?",
+      "options": [
+        "Common or Public Law",
+        "Maritime law",
+        "Corporate commercial law",
+        "Banking regulations"
+      ],
+      "correctIndex": 0,
+      "topic": "Common Law"
     },
     {
-      "question": "Under TSAA principles, peacekeeping begins with:",
-      "options": ["Personal responsibility and right relationship", "Militarized enforcement", "Administrative fines", "Corporate sanctions"],
-      "correctIndex": 0
+      "question": "What is the ultimate purpose of lawful government?",
+      "options": [
+        "To serve and protect the people’s rights and property",
+        "To collect taxes for foreign powers",
+        "To manage international trade",
+        "To regulate corporate profits"
+      ],
+      "correctIndex": 0,
+      "topic": "Purpose of Government"
     },
     {
-      "question": "Which best fits the Assembly’s view of government?",
-      "options": ["Delegated power from the people, limited by Public Law", "Unlimited power from central authorities", "Exclusive control by corporate boards", "Emergency rule as a default"],
-      "correctIndex": 0
+      "question": "In lawful terms, what does the word 'state' originally refer to?",
+      "options": [
+        "The condition or status of being — not a corporate territory",
+        "A provincial subdivision of government",
+        "An incorporated entity",
+        "A national flag or emblem"
+      ],
+      "correctIndex": 0,
+      "topic": "Meaning of State"
     },
     {
-      "question": "A key purpose of repopulating the land and soil jurisdiction is to:",
-      "options": ["Restore lawful title and standing for the people", "Expand maritime insurance markets", "Centralize tax collection", "Privatize natural resources"],
-      "correctIndex": 0
+      "question": "What principle separates the living jurisdiction from the legal jurisdiction?",
+      "options": [
+        "Consent",
+        "Money",
+        "Nationality",
+        "Voting registration"
+      ],
+      "correctIndex": 0,
+      "topic": "Consent"
     },
     {
-      "question": "In the Assembly model, disputes should be resolved by:",
-      "options": ["A jury of peers under Common Law", "A maritime judge in chambers", "An international tribunal by default", "An executive directive"],
-      "correctIndex": 0
+      "question": "According to TSAA, why are people called 'citizens' in corporate systems?",
+      "options": [
+        "Because they are considered property or employees of the corporation",
+        "Because it honors their sovereignty",
+        "Because it reflects ancient tribal membership",
+        "Because it ensures public accountability"
+      ],
+      "correctIndex": 0,
+      "topic": "Corporate Citizenship"
     },
     {
-      "question": "Why is transparency in public notice important?",
-      "options": ["It provides lawful notice, due process, and accountability", "It increases brand awareness", "It satisfies shareholder demands", "It allows secret arbitration"],
-      "correctIndex": 0
+      "question": "How does a man or woman reclaim their lawful estate?",
+      "options": [
+        "By recording their status correction and reconveyance to the land and soil jurisdiction",
+        "By paying all debts to the state",
+        "By applying for a passport",
+        "By voting in corporate elections"
+      ],
+      "correctIndex": 0,
+      "topic": "Reclaiming Estate"
     },
     {
-      "question": "TSAA emphasizes that lawful authority is:",
-      "options": ["Delegated and limited by the people’s consent", "Inherent in office regardless of consent", "Derived from foreign treaties only", "Privately purchased via license"],
-      "correctIndex": 0
+      "question": "What does it mean to 'record, not register'?",
+      "options": [
+        "Recording places ownership on the public record; registration surrenders it to another authority",
+        "Both are the same action",
+        "Recording is illegal without registration",
+        "Registration ensures privacy"
+      ],
+      "correctIndex": 0,
+      "topic": "Recording vs Registration"
+    },
+
+    /* --- Advanced Section --- */
+
+    {
+      "question": "Why do lawful assemblies avoid political affiliations?",
+      "options": [
+        "Because politics divides the people and lawful assemblies operate in peace and unity",
+        "Because it is illegal to vote",
+        "Because they are apolitical corporations",
+        "Because politics is too complicated"
+      ],
+      "correctIndex": 0,
+      "topic": "Apolitical Assemblies"
     },
     {
-      "question": "Which statement aligns with TSAA’s approach to politics?",
-      "options": ["TSAA is not a political party and does not seek corporate power", "TSAA aims to form coalitions for statutory control", "TSAA is a private lobbying platform", "TSAA is a multinational governance company"],
-      "correctIndex": 0
+      "question": "How is 'common law' distinguished from 'statutory law'?",
+      "options": [
+        "Common law is based on customs and moral principles; statutory law is written by legislatures",
+        "Common law only applies in courts of record",
+        "Statutory law is always superior",
+        "They are the same in modern use"
+      ],
+      "correctIndex": 0,
+      "topic": "Common vs Statutory"
     },
     {
-      "question": "The Assembly’s concept of peace is grounded in:",
-      "options": ["Love, gratitude, and right action", "Fear and obedience", "Punitive taxation", "International debt schemes"],
-      "correctIndex": 0
+      "question": "What document acts as living proof of your lawful intent to self-govern?",
+      "options": [
+        "The Common Carry Declaration",
+        "A corporate ID card",
+        "A driver’s licence",
+        "A tax certificate"
+      ],
+      "correctIndex": 0,
+      "topic": "Common Carry Declaration"
     },
     {
-      "question": "Public office holders must be accountable to:",
-      "options": ["Public Law and the people they serve", "Shareholders first", "Private arbitration boards", "Foreign supervisors"],
-      "correctIndex": 0
+      "question": "What is the purpose of the Public Law Assembly’s Coordinators?",
+      "options": [
+        "To assist others in correcting their status and keeping the peace",
+        "To collect fees",
+        "To create new statutes",
+        "To enforce corporate policies"
+      ],
+      "correctIndex": 0,
+      "topic": "Assembly Coordinators"
     },
     {
-      "question": "What is the practical function of an Assembly?",
-      "options": ["Self-governance by the people, with recorded decisions", "A corporate branch committee", "A military command structure", "A statutory advisory panel"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Why does TSAA distinguish between living people and corporate PERSONS?",
-      "options": ["To restore the living people to their lawful standing and rights", "To create more licenses", "To streamline maritime trade", "To qualify for bond markets"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Consent of the governed means:",
-      "options": ["Authority is valid only when granted by the people", "Authority is permanent after election", "Authority flows from international agencies", "Authority is assumed by silence forever"],
-      "correctIndex": 0
-    },
-    {
-      "question": "The Assembly’s lawful notices and decisions are best kept as:",
-      "options": ["Accessible public records", "Confidential attorney work product", "Corporate trade secrets", "Oral traditions only"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Which law form primarily applies to ships and corporations?",
-      "options": ["Admiralty/Maritime Law", "Common Law of the land", "Ecclesiastical Law", "Clan Kinship Law"],
-      "correctIndex": 0
-    },
-    {
-      "question": "TSAA’s approach to governance favors:",
-      "options": ["Decentralized, accountable, and lawful structures", "Centralized command and secrecy", "Private control of public assets", "Permanent emergency measures"],
-      "correctIndex": 0
-    },
-    {
-      "question": "What is a key outcome TSAA seeks for people who repopulate the land jurisdiction?",
-      "options": ["Restored ownership, responsibility, and public standing", "Automatic commercial privileges", "International voting rights", "Military rank and pay"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Which best reflects the Assembly’s stance on coercion?",
-      "options": ["Lawful governance relies on consent, not coercion", "Coercion is preferred for efficiency", "Secrecy and force ensure order", "Administrative fines replace consent"],
-      "correctIndex": 0
-    },
-    {
-      "question": "TSAA encourages members to:",
-      "options": ["Study principles of law, peace, and responsibility", "Seek corporate franchises", "Prioritize party politics", "Adopt foreign codes first"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Public Law differs from private corporate policy because:",
-      "options": ["It binds officers to serve the people’s rights and peace", "It sets shipping rates for fleets", "It standardizes HR procedures", "It manages international tariffs"],
-      "correctIndex": 0
-    },
-    {
-      "question": "The Assembly emphasizes recording decisions mainly to:",
-      "options": ["Provide notice and create a lawful, public trail", "Increase administrative complexity", "Satisfy bond insurers", "Meet investor relations requirements"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Which statement fits TSAA’s view of rightful authority?",
-      "options": ["It must be transparent, delegated, and accountable", "It operates best in secrecy", "It derives from corporate bylaws", "It is immune once granted"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Under Assembly principles, a lawful jury is composed of:",
-      "options": ["Peers from the community", "Appointed maritime officers", "Foreign observers", "Corporate auditors"],
-      "correctIndex": 0
-    },
-    {
-      "question": "TSAA’s educational work primarily supports people to:",
-      "options": ["Understand their lawful rights and duties", "Apply for special corporate benefits", "Obtain merchant mariner status", "Draft private equity agreements"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Why is the distinction between the land and sea jurisdictions important?",
-      "options": ["It clarifies which law applies to living people versus legal persons", "It determines fishing quotas", "It selects aviation routes", "It sets telecom spectrum fees"],
-      "correctIndex": 0
-    },
-    {
-      "question": "The Assembly promotes peace chiefly by:",
-      "options": ["Right relationship, truth, and due process", "Increasing penalties and surveillance", "Expanding military offices", "Privatizing public safety"],
-      "correctIndex": 0
-    },
-    {
-      "question": "A lawful assembly differs from a corporate board because it:",
-      "options": ["Serves the public under recorded Public Law", "Issues private stock options", "Files confidential resolutions", "Reports to shareholders only"],
-      "correctIndex": 0
-    },
-    {
-      "question": "People participate in TSAA to:",
-      "options": ["Rebuild lawful self-governance in community", "Gain statutory immunity", "Acquire corporate titles", "Join international party politics"],
-      "correctIndex": 0
-    },
-    {
-      "question": "In Assembly teachings, the source of rights is:",
-      "options": ["Inherent and natural, not granted by offices", "Licensed by agencies", "Conferred by corporate policy", "Awarded by tribunals"],
-      "correctIndex": 0
-    },
-    {
-      "question": "A key characteristic of lawful government is:",
-      "options": ["Accountability to Public Law and the people", "Permanent secrecy in process", "Unreviewable emergency powers", "Exclusive private arbitration"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Common Law juries decide based on:",
-      "options": ["Facts, truth, and community standards", "Agency guidelines alone", "International maritime schedules", "Confidential corporate memos"],
-      "correctIndex": 0
-    },
-    {
-      "question": "The Assembly’s core educational aim is to:",
-      "options": ["Increase awareness of lawful self-governance", "Train party candidates", "Manage shipping registries", "Sell governance licenses"],
-      "correctIndex": 0
-    },
-    {
-      "question": "TSAA’s position on offices of trust is that they must:",
-      "options": ["Be exercised honorably with duty to the people", "Seek profit first", "Remain beyond public review", "Be held for life terms"],
-      "correctIndex": 0
-    },
-    {
-      "question": "Why are minutes and notices recorded?",
-      "options": ["To create traceable, verifiable public acts", "To increase paperwork only", "To qualify for grants", "To optimize logistics"],
-      "correctIndex": 0
-    },
-    {
-      "question": "The Assembly’s long-term vision most closely aligns with:",
-      "options": ["Free, peaceful, responsible communities on the land", "Centralized administrative control", "Maritime governance inland", "Partisan dominance"],
-      "correctIndex": 0
-    },
-    {
-      "question": "TSAA distinguishes politics from governance because:",
-      "options": ["Lawful governance serves rights; politics pursues power", "They are identical functions", "Politics is required for peace", "Governance depends on party funding"],
-      "correctIndex": 0
-    },
-    {
-      "question": "In Assembly terms, lawful notice primarily exists to:",
-      "options": ["Inform the public and allow due process", "Secure private advantage", "Enable secret settlements", "Trigger maritime salvage rights"],
-      "correctIndex": 0
-    },
-    {
-      "question": "When people act together in Assembly, they:",
-      "options": ["Reclaim responsibility for local lawful order", "Waive all obligations", "Operate corporate franchises", "Adopt foreign policy mandates"],
-      "correctIndex": 0
-    },
-    {
-      "question": "According to TSAA teachings, peace is sustained by:",
-      "options": ["Understanding, forgiveness, and right action", "Force, fear, and fines", "Secret arbitration", "Permanent emergencies"],
-      "correctIndex": 0
-    },
-    {
-      "question": "The Assembly encourages recording public acts because it:",
-      "options": ["Strengthens legitimacy and trust", "Creates private leverage", "Reduces community input", "Eliminates accountability"],
-      "correctIndex": 0
-    },
-    {
-      "question": "TSAA’s non-corporate character means:",
-      "options": ["It is not formed to operate in commerce for profit", "It must issue shares", "It answers to investors first", "It holds maritime licenses"],
-      "correctIndex": 0
+      "question": "Which phrase best summarizes lawful living?",
+      "options": [
+        "Do no harm, cause no loss, keep the peace",
+        "Follow every government order",
+        "Maximize profits",
+        "Win legal arguments"
+      ],
+      "correctIndex": 0,
+      "topic": "Lawful Living"
     }
   ]
 }
