@@ -1,6 +1,6 @@
 // ===============================
 // The Southern African Assembly – Correct Your Status Quiz
-// Stable Redundant Build (vFinal)
+// Final Redundant Auto-Start Build (No Name Input)
 // ===============================
 
 // --- Configuration ---
@@ -18,7 +18,6 @@ let currentLevel = parseInt(localStorage.getItem("tsaaLevel")) || 1;
 let currentQuestion = 0;
 let score = 0;
 let levelData = [];
-let playerName = localStorage.getItem("playerName") || "";
 
 // --- Elements ---
 const quizContainer = document.getElementById("quiz");
@@ -28,61 +27,9 @@ const restartBtn = document.getElementById("restartBtn");
 const progressBar = document.getElementById("progressBar");
 const levelTitle = document.getElementById("levelTitle");
 
-// --- Welcome screen: create once, wire once ---
-function ensureWelcomeScreen() {
-  let screen = document.getElementById("welcomeScreen");
-  if (!screen) {
-    screen = document.createElement("div");
-    screen.id = "welcomeScreen";
-    screen.innerHTML = `
-      <h2>Welcome to the Southern African Assembly Knowledge Quiz</h2>
-      <p>Please enter your name to begin:</p>
-      <input type="text" id="playerNameInput" placeholder="Your full name" autocomplete="name" />
-      <button id="startQuizBtn" type="button">Start Quiz</button>
-    `;
-    const container = document.getElementById("container");
-    container && container.firstChild
-      ? container.insertBefore(screen, container.firstChild)
-      : container.appendChild(screen);
-  }
-
-  const startBtn = document.getElementById("startQuizBtn");
-  if (startBtn) {
-    startBtn.onclick = null;
-    startBtn.addEventListener(
-      "click",
-      (e) => {
-        e.preventDefault();
-        const input = document.getElementById("playerNameInput");
-        const nameInput = (input?.value || "").trim();
-        if (nameInput.length < 2) {
-          alert("Please enter your full name to continue.");
-          input?.focus();
-          return;
-        }
-        playerName = nameInput;
-        localStorage.setItem("playerName", playerName);
-        screen.classList.add("hidden");
-        startQuiz();
-      },
-      { passive: true }
-    );
-  }
-
-  quizContainer.classList.add("hidden");
-  nextBtn.classList.add("hidden");
-  restartBtn.classList.add("hidden");
-  resultContainer.classList.add("hidden");
-  screen.classList.remove("hidden");
-}
-
 // --- Boot ---
 document.addEventListener("DOMContentLoaded", () => {
-  ensureWelcomeScreen();
-  if (playerName && playerName.trim().length > 1) {
-    document.getElementById("welcomeScreen")?.classList.add("hidden");
-    startQuiz();
-  }
+  startQuiz();
 });
 
 // --- Core Game Start ---
@@ -91,7 +38,7 @@ function startQuiz() {
   loadLevel(currentLevel);
 }
 
-// --- Load Level (Redundant Safe) ---
+// --- Load Level (with redundancy) ---
 function loadLevel(level, retry = false) {
   quizContainer.classList.remove("hidden");
   resultContainer.classList.add("hidden");
@@ -147,7 +94,7 @@ function loadLevel(level, retry = false) {
       }
       quizContainer.innerHTML = `
         <p style="color:#b22222;">⚠️ Could not load Level ${level}.<br>
-        Please ensure <strong>questions/level${level}.json</strong> exists or refresh the page.</p>
+        Please ensure the file <strong>questions/level${level}.json</strong> exists or refresh the page.</p>
       `;
       nextBtn.classList.add("hidden");
       resultContainer.classList.add("hidden");
@@ -228,7 +175,6 @@ function finishLevel() {
 
   resultContainer.innerHTML = `
     <h2>Level ${currentLevel} Complete</h2>
-    <p>Well done, ${playerName}!</p>
     <h3>Your Score: ${score}/${total} (${Math.round(percent)}%)</h3>
     <p>${feedback}</p>
   `;
@@ -255,13 +201,13 @@ function finishLevel() {
   }
 }
 
-// --- Volunteer Popup ---
+// --- Volunteer Prompt ---
 function showVolunteerPrompt() {
   const overlay = document.createElement("div");
   overlay.id = "volunteerModal";
   overlay.innerHTML = `
     <div class="modal-content">
-      <h3>🌿 Wow ${playerName}, you really understand all this!</h3>
+      <h3>🌿 Wow! You really understand all this!</h3>
       <p>Have you thought about being a volunteer for the Assembly?</p>
       <div class="modal-buttons">
         <button id="yesVolunteer">Yes! I'd love to</button>
@@ -293,7 +239,7 @@ function resetQuiz() {
     resultContainer.classList.add("hidden");
     nextBtn.classList.add("hidden");
     restartBtn.classList.add("hidden");
-    setTimeout(() => ensureWelcomeScreen(), 300);
+    setTimeout(() => startQuiz(), 300);
   } catch (err) {
     console.error("Restart error:", err);
     alert("⚠️ Restart encountered a problem — reloading the page...");
@@ -301,5 +247,5 @@ function resetQuiz() {
   }
 }
 
-// --- Restart Button (manual) ---
+// --- Manual Restart Button ---
 restartBtn.addEventListener("click", resetQuiz);
