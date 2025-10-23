@@ -1,62 +1,57 @@
 {
   "level": 2,
   "title": "Jurisdictions and Law",
-  "summary": "This level explains the three main jurisdictions — land, air, and sea — and how they relate to self-governance and Common Law.",
+  "summary": "Air, Land, and Sea jurisdictions — how authority, liability, and remedy differ, and how TSAA positions the living man/woman within lawful self-governance.",
   "questions": [
     {
-      "question": "Which jurisdiction is the highest and relates to spiritual matters?",
-      "options": ["Air", "Land", "Sea", "Corporate"],
+      "question": "Which jurisdictions does TSAA recognize as the primary domains operating on Earth?",
+      "options": ["Air, Land, and Sea", "Civil, Criminal, and Canon", "Municipal, Federal, and Global", "Private, Public, and Commercial"],
       "correctIndex": 0
     },
     {
-      "question": "The land and soil jurisdiction deals primarily with what?",
-      "options": [
-        "Living men and women and their property",
-        "Maritime trade",
-        "Corporate agreements",
-        "International policy"
-      ],
+      "question": "In TSAA’s framework, which jurisdiction is most closely tied to natural rights and living people?",
+      "options": ["Land", "Sea", "Air", "Commercial"],
       "correctIndex": 0
     },
     {
-      "question": "Which jurisdiction operates under Admiralty (Maritime) Law?",
-      "options": ["Sea", "Air", "Land", "Ecclesiastical"],
+      "question": "Which jurisdiction is most associated with commerce, vessels, titles, and negotiable instruments?",
+      "options": ["Sea", "Land", "Air", "Ecclesiastical"],
       "correctIndex": 0
     },
     {
-      "question": "The Assembly restores the lawful position of people on which jurisdiction?",
-      "options": ["Land and Soil", "Sea and Air", "Municipal", "Corporate"],
+      "question": "Which jurisdiction concerns highest principles, trusts, and ideas rather than tangible soil or ships?",
+      "options": ["Air", "Sea", "Land", "Municipal"],
       "correctIndex": 0
     },
     {
-      "question": "Which law form derives directly from Natural Law?",
-      "options": ["Common Law", "Statutory Law", "Maritime Law", "Civil Code"],
+      "question": "Under TSAA’s view, ‘personhood’ used in commercial codes generally refers to:",
+      "options": ["A legal fiction or corporate capacity", "A living man or woman on the land", "A clan in customary law", "An ecclesiastical office"],
       "correctIndex": 0
     },
     {
-      "question": "Maritime Law applies to which entities?",
-      "options": ["Ships, corporations, and legal persons", "Living men and women", "Ecclesiastical courts", "Common Law courts"],
+      "question": "Why does TSAA prioritize recording on the land jurisdiction?",
+      "options": ["It gives lawful notice among the people", "It grants a franchise", "It enrolls you in a municipal program", "It creates a maritime lien"],
       "correctIndex": 0
     },
     {
-      "question": "The Assembly’s lawful courts are based on which jurisdiction?",
-      "options": ["Land and Soil", "Sea", "Air", "Corporate"],
+      "question": "Which statement best matches TSAA’s goal for jurisdictional clarity?",
+      "options": ["Place the living back on the land and soil, and keep commerce in its lane", "Abolish all sea law", "Replace every court with land courts", "Merge private and public offices"],
       "correctIndex": 0
     },
     {
-      "question": "In Common Law, disputes are resolved by whom?",
-      "options": ["A jury of peers", "A maritime judge", "Corporate tribunal", "Foreign officials"],
+      "question": "What does TSAA say about unconsented conversion of living beings into corporate PERSONS?",
+      "options": ["It’s a registration-based presumption that must be rebutted and corrected", "It’s harmless and automatic", "It permanently changes nationality", "It dissolves private rights"],
       "correctIndex": 0
     },
     {
-      "question": "Statutory law applies primarily to whom?",
-      "options": ["Corporate PERSONS", "Living people", "Lawful assemblies", "Sovereign nations"],
+      "question": "In practice, which filing helps move your name/estate out of the sea into the land and soil?",
+      "options": ["A Deed of Re-Conveyance", "A commercial UCC lien only", "A passport renewal", "A driver’s license update"],
       "correctIndex": 0
     },
     {
-      "question": "Lawful governance begins by operating under which law?",
-      "options": ["Public Law and Common Law", "Private Corporate Law", "Admiralty Regulations", "Municipal Statutes"],
+      "question": "What is the typical remedy venue for disputes over ships, obligations, and titles?",
+      "options": ["Sea (admiralty/commercial) jurisdiction", "Land jurisdiction courts", "Air (ecclesiastical) tribunals", "Village customary councils only"],
       "correctIndex": 0
-    }
-  ]
-}
+    },
+    {
+      "question": "According to TSAA, which jurisdiction most appropriately hosts assemblies of the people
