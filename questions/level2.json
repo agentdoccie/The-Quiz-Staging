@@ -1,57 +1,343 @@
 {
   "level": 2,
   "title": "Jurisdictions and Law",
-  "summary": "Air, Land, and Sea jurisdictions — how authority, liability, and remedy differ, and how TSAA positions the living man/woman within lawful self-governance.",
+  "summary": "Level 2 expands your understanding of jurisdiction — air, land, and sea — and how corporations extended their influence through maritime law. You’ll learn how lawful assemblies reclaim proper jurisdiction under Public Law.",
   "questions": [
     {
-      "question": "Which jurisdictions does TSAA recognize as the primary domains operating on Earth?",
-      "options": ["Air, Land, and Sea", "Civil, Criminal, and Canon", "Municipal, Federal, and Global", "Private, Public, and Commercial"],
-      "correctIndex": 0
+      "question": "Which law form governs the sea and commercial activity?",
+      "options": [
+        "Admiralty or Maritime Law",
+        "Common Law",
+        "Cannon Law",
+        "Land and Soil Law"
+      ],
+      "correctIndex": 0,
+      "topic": "Maritime Law"
     },
     {
-      "question": "In TSAA’s framework, which jurisdiction is most closely tied to natural rights and living people?",
-      "options": ["Land", "Sea", "Air", "Commercial"],
-      "correctIndex": 0
+      "question": "Which law form governs the land and the living people?",
+      "options": [
+        "Common Law or Public Law",
+        "Corporate Regulations",
+        "Maritime Law",
+        "Military Law"
+      ],
+      "correctIndex": 0,
+      "topic": "Land Jurisdiction"
     },
     {
-      "question": "Which jurisdiction is most associated with commerce, vessels, titles, and negotiable instruments?",
-      "options": ["Sea", "Land", "Air", "Ecclesiastical"],
-      "correctIndex": 0
+      "question": "What law form governs the air and spiritual matters?",
+      "options": [
+        "Ecclesiastical Law",
+        "Maritime Law",
+        "Corporate Law",
+        "Civil Statutes"
+      ],
+      "correctIndex": 0,
+      "topic": "Air Jurisdiction"
     },
     {
-      "question": "Which jurisdiction concerns highest principles, trusts, and ideas rather than tangible soil or ships?",
-      "options": ["Air", "Sea", "Land", "Municipal"],
-      "correctIndex": 0
+      "question": "What determines which jurisdiction applies to a man or woman?",
+      "options": [
+        "Their consent and declared political status",
+        "Their postal address",
+        "Their birthplace",
+        "The government in power"
+      ],
+      "correctIndex": 0,
+      "topic": "Consent and Jurisdiction"
     },
     {
-      "question": "Under TSAA’s view, ‘personhood’ used in commercial codes generally refers to:",
-      "options": ["A legal fiction or corporate capacity", "A living man or woman on the land", "A clan in customary law", "An ecclesiastical office"],
-      "correctIndex": 0
+      "question": "Why is consent critical in law?",
+      "options": [
+        "Because without consent no lawful contract or authority exists",
+        "Because it increases tax revenue",
+        "Because it allows lawyers to interpret meaning",
+        "Because it simplifies court procedures"
+      ],
+      "correctIndex": 0,
+      "topic": "Consent Principle"
     },
     {
-      "question": "Why does TSAA prioritize recording on the land jurisdiction?",
-      "options": ["It gives lawful notice among the people", "It grants a franchise", "It enrolls you in a municipal program", "It creates a maritime lien"],
-      "correctIndex": 0
+      "question": "What symbol historically represented maritime jurisdiction?",
+      "options": [
+        "The gold fringe on a flag",
+        "A green branch of peace",
+        "The civil peace flag",
+        "A red wax seal"
+      ],
+      "correctIndex": 0,
+      "topic": "Symbolism of Jurisdiction"
     },
     {
-      "question": "Which statement best matches TSAA’s goal for jurisdictional clarity?",
-      "options": ["Place the living back on the land and soil, and keep commerce in its lane", "Abolish all sea law", "Replace every court with land courts", "Merge private and public offices"],
-      "correctIndex": 0
+      "question": "In lawful understanding, what does the term 'legal fiction' mean?",
+      "options": [
+        "A created entity or PERSON that exists only by assumption or registration",
+        "A myth about law",
+        "An error in statute drafting",
+        "A nickname for lawyers"
+      ],
+      "correctIndex": 0,
+      "topic": "Legal Fiction"
     },
     {
-      "question": "What does TSAA say about unconsented conversion of living beings into corporate PERSONS?",
-      "options": ["It’s a registration-based presumption that must be rebutted and corrected", "It’s harmless and automatic", "It permanently changes nationality", "It dissolves private rights"],
-      "correctIndex": 0
+      "question": "Why do corporate courts often claim jurisdiction over living people?",
+      "options": [
+        "Because people unknowingly appear as the legal PERSON they created",
+        "Because corporate courts have worldwide power",
+        "Because natural law allows it",
+        "Because they represent God"
+      ],
+      "correctIndex": 0,
+      "topic": "Corporate Courts"
     },
     {
-      "question": "In practice, which filing helps move your name/estate out of the sea into the land and soil?",
-      "options": ["A Deed of Re-Conveyance", "A commercial UCC lien only", "A passport renewal", "A driver’s license update"],
-      "correctIndex": 0
+      "question": "What restores a man or woman to the land and soil jurisdiction?",
+      "options": [
+        "Recording their Deed of Re-Conveyance and Status Correction",
+        "Registering for a voter card",
+        "Applying for a legal name change",
+        "Filing taxes"
+      ],
+      "correctIndex": 0,
+      "topic": "Re-Conveyance"
     },
     {
-      "question": "What is the typical remedy venue for disputes over ships, obligations, and titles?",
-      "options": ["Sea (admiralty/commercial) jurisdiction", "Land jurisdiction courts", "Air (ecclesiastical) tribunals", "Village customary councils only"],
-      "correctIndex": 0
+      "question": "Which law form is considered the highest on Earth under divine order?",
+      "options": [
+        "Natural Law",
+        "Statutory Law",
+        "Civil Law",
+        "Corporate Law"
+      ],
+      "correctIndex": 0,
+      "topic": "Hierarchy of Law"
+    },
+
+    /* --- Medium Difficulty Section --- */
+
+    {
+      "question": "How did maritime law expand onto the land?",
+      "options": [
+        "Through registration, contracts, and assumption of consent",
+        "By military conquest alone",
+        "By religious decree",
+        "By democratic vote"
+      ],
+      "correctIndex": 0,
+      "topic": "Expansion of Maritime Law"
     },
     {
-      "question": "According to TSAA, which jurisdiction most appropriately hosts assemblies of the people
+      "question": "What role did birth registration play in transferring jurisdiction?",
+      "options": [
+        "It created a corporate PERSON subject to maritime jurisdiction",
+        "It recorded the baby under common law",
+        "It provided lawful protection only",
+        "It declared allegiance to natural law"
+      ],
+      "correctIndex": 0,
+      "topic": "Birth Registration"
+    },
+    {
+      "question": "Why are statutory codes and acts considered 'private law'?",
+      "options": [
+        "Because they apply only within corporations or franchises that consent to them",
+        "Because they are secret laws",
+        "Because they replace all public law",
+        "Because they come from ancient Rome"
+      ],
+      "correctIndex": 0,
+      "topic": "Statutory Law"
+    },
+    {
+      "question": "What distinguishes a public court of record from a private tribunal?",
+      "options": [
+        "A court of record operates under common law and public accountability",
+        "A court of record enforces commercial contracts",
+        "A private tribunal is more lawful",
+        "There is no difference"
+      ],
+      "correctIndex": 0,
+      "topic": "Court of Record"
+    },
+    {
+      "question": "What is the function of an affidavit in law?",
+      "options": [
+        "It stands as truth in commerce when unrebutted",
+        "It is a request for opinion",
+        "It acts as a corporate license",
+        "It serves as hearsay evidence"
+      ],
+      "correctIndex": 0,
+      "topic": "Affidavit"
+    },
+    {
+      "question": "What is 'living testimony' compared to 'legal evidence'?",
+      "options": [
+        "Living testimony comes from the man or woman directly; legal evidence is documentary and fictional",
+        "They are identical",
+        "Legal evidence is superior",
+        "Living testimony cannot be used"
+      ],
+      "correctIndex": 0,
+      "topic": "Living Testimony"
+    },
+    {
+      "question": "What is the lawful source of power for all assemblies?",
+      "options": [
+        "The people themselves as the living body politic",
+        "Corporate charters",
+        "Military authority",
+        "Banking trusts"
+      ],
+      "correctIndex": 0,
+      "topic": "People as Power Source"
+    },
+    {
+      "question": "What defines 'jurisdiction' most accurately?",
+      "options": [
+        "The right to speak and apply law within a defined area or context",
+        "The ownership of all property",
+        "The right to vote in elections",
+        "The ability to make profits"
+      ],
+      "correctIndex": 0,
+      "topic": "Definition of Jurisdiction"
+    },
+    {
+      "question": "What happens when you appear in a corporate court as the living man or woman?",
+      "options": [
+        "The court lacks jurisdiction unless you consent to act as the PERSON",
+        "You become an employee of the state",
+        "You gain corporate privileges",
+        "The judge automatically rules for you"
+      ],
+      "correctIndex": 0,
+      "topic": "Court Appearance"
+    },
+    {
+      "question": "What is the lawful meaning of 'peace' in the Assembly context?",
+      "options": [
+        "A condition where rights and property are respected and no harm is done",
+        "An emotional state of calm",
+        "A corporate slogan",
+        "A political truce"
+      ],
+      "correctIndex": 0,
+      "topic": "Peace Definition"
+    },
+
+    /* --- Advanced Section --- */
+
+    {
+      "question": "Which maxim best describes jurisdiction?",
+      "options": [
+        "He who creates controls",
+        "Might makes right",
+        "Money rules all",
+        "Silence means guilt"
+      ],
+      "correctIndex": 0,
+      "topic": "Maxim of Jurisdiction"
+    },
+    {
+      "question": "Why is the concept of 'notice' essential in law?",
+      "options": [
+        "Because no man or woman can be held to a law they have not been lawfully informed of",
+        "Because it increases government paperwork",
+        "Because it replaces consent",
+        "Because it makes laws valid"
+      ],
+      "correctIndex": 0,
+      "topic": "Lawful Notice"
+    },
+    {
+      "question": "What restores true jurisdiction to the people?",
+      "options": [
+        "Their active participation in lawful assemblies and public recordkeeping",
+        "Voting in corporate elections",
+        "Using the correct postal code",
+        "Hiring a maritime lawyer"
+      ],
+      "correctIndex": 0,
+      "topic": "Restoring Jurisdiction"
+    },
+    {
+      "question": "What does 'land and soil jurisdiction' protect?",
+      "options": [
+        "The property, rights, and inheritance of living men and women",
+        "Corporate patents",
+        "Sea trade",
+        "Military operations"
+      ],
+      "correctIndex": 0,
+      "topic": "Land and Soil Protection"
+    },
+    {
+      "question": "How can an assembly confirm it operates under land jurisdiction?",
+      "options": [
+        "By being unincorporated and serving living people under public law",
+        "By filing tax returns",
+        "By registering with the state",
+        "By adopting maritime symbols"
+      ],
+      "correctIndex": 0,
+      "topic": "Assembly Jurisdiction"
+    },
+    {
+      "question": "What maxim defines law on the sea?",
+      "options": [
+        "Contract makes the law",
+        "No harm, no loss",
+        "Love thy neighbor",
+        "Faith above reason"
+      ],
+      "correctIndex": 0,
+      "topic": "Sea Maxim"
+    },
+    {
+      "question": "Why do lawful men and women avoid 'acting' in court?",
+      "options": [
+        "Because acting implies consent to be treated as a corporate fiction",
+        "Because they reject all justice",
+        "Because it is rude",
+        "Because it delays proceedings"
+      ],
+      "correctIndex": 0,
+      "topic": "Acting in Court"
+    },
+    {
+      "question": "What is the highest duty of lawful governance?",
+      "options": [
+        "To keep the peace and protect the innocent",
+        "To enforce corporate compliance",
+        "To collect taxes",
+        "To grow GDP"
+      ],
+      "correctIndex": 0,
+      "topic": "Duty of Governance"
+    },
+    {
+      "question": "Why is silence considered agreement in commerce?",
+      "options": [
+        "Because unrebutted claims stand as truth in law",
+        "Because silence equals ignorance",
+        "Because only written words matter",
+        "Because contracts require sound"
+      ],
+      "correctIndex": 0,
+      "topic": "Tacit Agreement"
+    },
+    {
+      "question": "What lawful principle ensures all people have equal standing under creation?",
+      "options": [
+        "Equality before the law of nature",
+        "Majority rule",
+        "Economic equity",
+        "Cultural recognition"
+      ],
+      "correctIndex": 0,
+      "topic": "Equality in Law"
+    }
+  ]
+}
