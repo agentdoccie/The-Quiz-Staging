@@ -1,106 +1,127 @@
 /* =======================================
-   Correct your Status — Quiz Theme
+   The Southern African Assembly – Correct Your Status Quiz
+   Final Responsive Theme
    ======================================= */
 
-/* Page */
 :root {
   --blue: #0073aa;
   --blue-dark: #005f87;
   --ink: #003366;
+  --text: #1e2a38;
   --bg: #f5f9fc;
+  --bar: #d6eaf8;
+  --ok: #d8f7d3;
+  --warn: #f9d3d3;
   --card: #ffffff;
-  --soft: #d6eaf8;
-  --success: #d8f7d3;
-  --warning: #f9d3d3;
+  --border: #b0d4e3;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body {
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
   background: var(--bg);
-  color: #1e2a38;
-  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  margin: 0;
 }
 
 #container {
   background: var(--card);
-  margin: 24px auto;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.1);
-  width: min(92%, 740px);
-  padding: 24px 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* Header */
 #tsaaHeader {
   display: flex;
-  gap: 12px;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  gap: 10px;
   border-bottom: 2px solid var(--blue);
   padding-bottom: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 #tsaaLogo {
-  width: 70px;
+  width: 80px;
   height: auto;
-  filter: drop-shadow(0 0 2px rgba(0,115,170,.3));
+  object-fit: contain;
+  opacity: 0.95;
+  filter: drop-shadow(0 0 2px rgba(0, 115, 170, 0.3));
 }
 
 h1 {
-  color: var(--ink);
-  font-size: 1.6rem;
   margin: 0;
+  color: var(--ink);
+  font-size: 1.45rem;
 }
 
-/* Titles & progress */
-#levelTitle {
+h2#levelTitle {
   color: var(--blue);
   font-weight: 600;
-  margin: 10px 0 16px;
+  margin: 10px 0 14px;
+  font-size: 1.2rem;
 }
 
 #progress {
-  height: 14px;
-  background: var(--soft);
+  background: var(--bar);
   border-radius: 10px;
+  height: 14px;
   overflow: hidden;
-  margin: 0 auto 18px;
+  margin: 10px 0 18px;
 }
 
 #progressBar {
-  height: 100%;
-  width: 0%;
   background: var(--blue);
-  transition: width .35s ease;
+  width: 0%;
+  height: 100%;
+  transition: width 0.4s ease;
 }
 
-/* Question */
-.question { margin: 10px 0 16px; }
+.question {
+  margin-bottom: 18px;
+}
+
+.question h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  color: #0f2a44;
+}
 
 button.option {
   display: block;
   width: 100%;
   background: #f9fcff;
   border: 1px solid var(--blue);
-  border-radius: 8px;
   color: var(--ink);
-  font-size: 1rem;
   padding: 12px;
   margin: 8px 0;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background .2s, color .2s, transform .02s;
+  transition: 0.2s ease;
+  text-align: left;
 }
 
-button.option:hover { background: var(--blue); color: #fff; }
-button.option:active { transform: scale(.995); }
+button.option:hover,
+button.option:focus {
+  background: var(--blue);
+  color: #fff;
+}
 
-/* Controls */
-#controls { display: flex; gap: 10px; justify-content: center; margin-top: 12px; }
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-#nextBtn, #resetAllBtn {
+#nextBtn,
+#resetAllBtn,
+#startLevelBtn,
+#startQuizBtn,
+.modal-buttons button {
   background: var(--blue);
   color: #fff;
   border: none;
@@ -108,50 +129,96 @@ button.option:active { transform: scale(.995); }
   padding: 10px 22px;
   cursor: pointer;
   font-size: 1rem;
-  transition: background .25s ease;
+  transition: background 0.3s;
 }
-#nextBtn:hover, #resetAllBtn:hover { background: var(--blue-dark); }
 
-.hidden { display: none !important; }
+#nextBtn:hover,
+#resetAllBtn:hover,
+#startLevelBtn:hover,
+#startQuizBtn:hover,
+.modal-buttons button:hover {
+  background: var(--blue-dark);
+}
 
-/* Results */
+#welcomeScreen {
+  margin: 8px 0 4px;
+}
+
+#welcomeScreen h2 {
+  color: var(--ink);
+  font-size: 1.25rem;
+  margin: 0 0 6px;
+}
+
+#welcomeScreen input {
+  width: 90%;
+  max-width: 480px;
+  padding: 10px;
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  margin: 8px auto;
+  font-size: 1rem;
+}
+
 #result {
   background: #f0f8ff;
-  border: 1px solid #b0d4e3;
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 18px;
   margin-top: 18px;
 }
 
-/* Volunteer modal */
-#volunteerModal {
-  position: fixed; inset: 0;
-  background: rgba(0,0,0,.35);
-  display: grid; place-items: center;
-  z-index: 9999;
-}
-#volunteerModal .modal-content {
-  background: #fff;
-  width: min(92%, 520px);
-  border-radius: 12px;
-  padding: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,.2);
-}
-#volunteerModal h3 { margin: 0 0 8px; color: var(--ink); }
-#volunteerModal .modal-buttons {
-  display: flex; gap: 10px; justify-content: flex-end; margin-top: 12px;
-}
-#volunteerModal .modal-buttons button {
-  background: var(--blue);
-  color: #fff; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer;
-}
-#volunteerModal .modal-buttons button.secondary {
-  background: #e7eef6; color: var(--ink);
+.hidden {
+  display: none;
 }
 
-/* Mobile */
-@media (max-width: 640px) {
-  h1 { font-size: 1.3rem; }
-  #container { padding: 20px; }
-  button.option { font-size: 1.02rem; }
+/* Volunteer modal */
+#volunteerModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#volunteerModal .modal-content {
+  background: #fff;
+  width: min(560px, 92%);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+#volunteerModal h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #tsaaLogo {
+    width: 70px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #nextBtn,
+  #resetAllBtn {
+    width: 60%;
+    min-width: 220px;
+  }
 }
