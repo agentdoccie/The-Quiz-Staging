@@ -1,6 +1,10 @@
 // ===============================
 // The Southern African Assembly – Correct Your Status Quiz
 // Staging build: The-Quiz-Staging
+// Enhancements:
+//  • Randomize answer order per question
+//  • Randomly sample 10 questions from 50 on every run (Option A)
+//  • Resilient loading (cache + retry) and mobile-safe UI
 // ===============================
 
 const basePath = "/The-Quiz-Staging/";
@@ -12,16 +16,34 @@ const KNOWN_LEVELS = [1, 2, 3, 4, 5];
 let currentLevel = parseInt(localStorage.getItem("tsaaLevel")) || 1;
 let currentQuestion = 0;
 let score = 0;
-let levelData = [];
+let levelData = [];   // after preparation, will contain 10 randomized questions
 let playerName = localStorage.getItem("playerName") || "";
 
-const quizContainer = document.getElementById("quiz");
-const nextBtn = document.getElementById("nextBtn");
+const quizContainer   = document.getElementById("quiz");
+const nextBtn         = document.getElementById("nextBtn");
 const resultContainer = document.getElementById("result");
-const progressBar = document.getElementById("progressBar");
-const levelTitle = document.getElementById("levelTitle");
-const resetAllBtn = document.getElementById("resetAllBtn");
+const progressBar     = document.getElementById("progressBar");
+const levelTitle      = document.getElementById("levelTitle");
+const resetAllBtn     = document.getElementById("resetAllBtn");
 
+// Utility: Fisher-Yates shuffle (in-place)
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+// Utility: sample N unique items from an array (no mutation of original)
+function sampleN(arr, n) {
+  if (n >= arr.length) return [...arr];
+  const copy = [...arr];
+  shuffle(copy);
+  return copy.slice(0, n);
+}
+
+// Create/ensure welcome screen (single instance)
 function ensureWelcomeScreen() {
   let screen = document.getElementById("welcomeScreen");
   if (!screen) {
@@ -40,24 +62,20 @@ function ensureWelcomeScreen() {
   const startBtn = document.getElementById("startQuizBtn");
   if (startBtn) {
     startBtn.onclick = null;
-    startBtn.addEventListener(
-      "click",
-      (e) => {
-        e.preventDefault();
-        const input = document.getElementById("playerNameInput");
-        const nameInput = (input?.value || "").trim();
-        if (nameInput.length < 2) {
-          alert("Please enter your full name to continue.");
-          input?.focus();
-          return;
-        }
-        playerName = nameInput;
-        localStorage.setItem("playerName", playerName);
-        screen.classList.add("hidden");
-        startQuiz();
-      },
-      { passive: true }
-    );
+    startBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const input = document.getElementById("playerNameInput");
+      const nameInput = (input?.value || "").trim();
+      if (nameInput.length < 2) {
+        alert("Please enter your full name to continue.");
+        input?.focus();
+        return;
+      }
+      playerName = nameInput;
+      localStorage.setItem("playerName", playerName);
+      screen.classList.add("hidden");
+      startQuiz();
+    }, { passive: true });
   }
 
   quizContainer.classList.add("hidden");
@@ -66,6 +84,7 @@ function ensureWelcomeScreen() {
   screen.classList.remove("hidden");
 }
 
+// Boot
 document.addEventListener("DOMContentLoaded", () => {
   ensureWelcomeScreen();
   if (playerName && playerName.trim().length > 1) {
@@ -76,11 +95,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function startQuiz() {
   quizContainer.classList.remove("hidden");
-  loadLevel(currentLevel).then(() => prefetchLevels(KNOWN_LEVELS.filter((n) => n !== currentLevel)));
+  loadLevel(currentLevel).then(() => prefetchLevels(KNOWN_LEVELS.filter(n => n !== currentLevel)));
 }
 
 const cacheKey = (lvl) => `tsaaLevelCache_${lvl}`;
 
+// Load JSON with resilience (online → cache; fallback to cache)
 async function loadLevel(level) {
   levelTitle.textContent = "";
   quizContainer.innerHTML = "";
@@ -104,12 +124,14 @@ async function loadLevel(level) {
       json = await res.json();
       localStorage.setItem(cacheKey(level), JSON.stringify(json));
       break;
-    } catch {}
+    } catch { /* no-op */ }
   }
 
   if (!json) {
     const cached = localStorage.getItem(cacheKey(level));
-    if (cached) json = JSON.parse(cached);
+    if (cached) {
+      try { json = JSON.parse(cached); } catch {}
+    }
   }
 
   if (!json) {
@@ -122,9 +144,10 @@ async function loadLevel(level) {
     return;
   }
 
-  levelData = json.questions || [];
+  // Prepare title
   levelTitle.textContent = `Level ${json.level}: ${json.title || ""}`;
 
+  // If summary exists, show intro card
   if (json.summary) {
     quizContainer.innerHTML = `
       <div class="summary-card">
@@ -133,16 +156,21 @@ async function loadLevel(level) {
         <button id="startLevelBtn">Start Level ${json.level}</button>
       </div>`;
     document.getElementById("startLevelBtn")?.addEventListener("click", () => {
+      // Prepare level data when user actually starts the level
+      levelData = prepareLevelData(json.questions || []);
       loadQuestion();
       nextBtn.classList.remove("hidden");
     });
     return;
   }
 
+  // Otherwise, prepare immediately and start
+  levelData = prepareLevelData(json.questions || []);
   loadQuestion();
   nextBtn.classList.remove("hidden");
 }
 
+// Prefetch & cache (non-blocking)
 async function prefetchLevels(levels) {
   for (const lvl of levels) {
     try {
@@ -151,10 +179,40 @@ async function prefetchLevels(levels) {
         const json = await res.json();
         localStorage.setItem(cacheKey(lvl), JSON.stringify(json));
       }
-    } catch {}
+    } catch { /* ignore */ }
   }
 }
 
+/**
+ * Prepare level data:
+ * - Randomly choose 10 questions from the source (50 expected)
+ * - For each chosen question, shuffle its answer options
+ * - Recompute correctIndex to match the shuffled options
+ */
+function prepareLevelData(allQuestions) {
+  const picked = sampleN(allQuestions, Math.min(10, allQuestions.length));
+
+  return picked.map((q) => {
+    const originalOptions = q.options.map((text, idx) => ({
+      text,
+      isCorrect: idx === q.correctIndex
+    }));
+
+    shuffle(originalOptions);
+
+    const newOptions = originalOptions.map(o => o.text);
+    const newCorrectIndex = originalOptions.findIndex(o => o.isCorrect);
+
+    return {
+      question: q.question,
+      options: newOptions,
+      correctIndex: newCorrectIndex,
+      // we can also carry any metadata if needed
+    };
+  });
+}
+
+// Render one question
 function loadQuestion() {
   const q = levelData[currentQuestion];
   if (!q) return finishLevel();
@@ -165,7 +223,8 @@ function loadQuestion() {
     <div class="question">
       <h3>Question ${currentQuestion + 1} of ${levelData.length}</h3>
       <p>${q.question}</p>
-    </div>`;
+    </div>
+  `;
 
   q.options.forEach((option, i) => {
     const btn = document.createElement("button");
@@ -178,13 +237,15 @@ function loadQuestion() {
   nextBtn.disabled = true;
 }
 
+// Select answer
 function selectAnswer(index, btn) {
   levelData[currentQuestion].selected = index;
   nextBtn.disabled = false;
-  document.querySelectorAll(".option").forEach((opt) => (opt.style.background = "#fff"));
+  document.querySelectorAll(".option").forEach(opt => (opt.style.background = "#fff"));
   btn.style.background = "#c5f2cc";
 }
 
+// Next / finish
 nextBtn.addEventListener("click", () => {
   const current = levelData[currentQuestion];
   if (current.selected === current.correctIndex) score++;
@@ -193,6 +254,7 @@ nextBtn.addEventListener("click", () => {
   else finishLevel();
 });
 
+// Finish level
 function finishLevel() {
   progressBar.style.width = "100%";
   const total = levelData.length || 1;
@@ -208,17 +270,16 @@ function finishLevel() {
   localStorage.setItem("tsaaScores", JSON.stringify(scores));
 
   const feedback =
-    percent >= 90
-      ? "🌟 Excellent! You’ve mastered this level."
-      : percent >= 70
-      ? "✅ Great job! You passed and built strong understanding."
-      : "⚠️ Keep going! Try again for a higher score.";
+    percent >= 90 ? "🌟 Excellent! You’ve mastered this level."
+    : percent >= 70 ? "✅ Great job! You passed and built strong understanding."
+    : "⚠️ Keep going! Try again for a higher score.";
 
   resultContainer.innerHTML = `
     <h2>Level ${currentLevel} Complete</h2>
     <p>Well done, ${playerName || "friend"}!</p>
     <h3>Your Score: ${score}/${total} (${Math.round(percent)}%)</h3>
-    <p>${feedback}</p>`;
+    <p>${feedback}</p>
+  `;
 
   if (percent >= VOLUNTEER_TRIGGER) showVolunteerPrompt();
 
@@ -235,6 +296,7 @@ function finishLevel() {
   }
 }
 
+// Volunteer modal
 function showVolunteerPrompt() {
   const overlay = document.createElement("div");
   overlay.id = "volunteerModal";
@@ -253,16 +315,19 @@ function showVolunteerPrompt() {
     window.open("https://thesouthafricanassembly.org/contact-us/", "_blank");
     overlay.remove();
   });
-
   document.getElementById("noVolunteer").addEventListener("click", () => {
     alert("👍 Maybe in the future! Let's hammer on and see what else you know!");
     overlay.remove();
   });
 }
 
+// Full reset (keep cached questions for offline)
 resetAllBtn.addEventListener("click", () => {
   if (!confirm("Are you sure you want to restart from Level 1?")) return;
-  localStorage.clear();
+  localStorage.removeItem("tsaaScores");
+  localStorage.removeItem("tsaaLevel");
+  // keep playerName so they don’t have to retype; remove this line if you want to clear name too:
+  // localStorage.removeItem("playerName");
   currentLevel = 1;
   currentQuestion = 0;
   ensureWelcomeScreen();
